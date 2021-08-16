@@ -18,7 +18,7 @@ App mobile
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">
-<a href="https://linkedin.com/in/https://www.linkedin.com/in/nicol%c3%a1s-seguro/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="https://www.linkedin.com/in/nicol%c3%a1s-seguro/" height="30" width="40" /></a>
+<a href="https://linkedin.com/in/nicol%c3%a1s-seguro/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="https://www.linkedin.com/in/nicol%c3%a1s-seguro/" height="30" width="40" /></a>
 <a href="https://medium.com/@nicolas-seguro" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/medium.svg" alt="@nicolas-seguro" height="30" width="40" /></a>
 <a href="/https://nicolas-seguro.medium.com/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/rss.svg" alt="https://nicolas-seguro.medium.com/" height="30" width="40" /></a>
 </p>
