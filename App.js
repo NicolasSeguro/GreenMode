@@ -1,5 +1,6 @@
 import { Button, StyleSheet, Text, TextInput, View } from 'react-native';
 
+import IconLoading from './src/components/loading';
 import React from 'react';
 import { StatusBar } from 'expo-status-bar';
 
