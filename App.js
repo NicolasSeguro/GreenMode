@@ -1,12 +1,19 @@
-import { StatusBar } from 'expo-status-bar';
+import { Button, StyleSheet, Text, TextInput, View } from 'react-native';
+
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StatusBar } from 'expo-status-bar';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+      <Text>Green Mode</Text>
+      <StatusBar style="auto" /> 
+      <View style={styles.view}>
+        <TextInput 
+          placeholder="Item de la lista"
+          style={styles.input} />
+        <Button title="Ir al shop"/>
+      </View>
     </View>
   );
 }
@@ -18,4 +25,14 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  view: {
+    flexDirection: 'row',
+    justifyContent: 'space-between'
+  },
+  input: {
+    borderBottomColor: 'black', 
+    borderBottomWidth: 1,
+    marginRight: 20
+  }
+  
 });
