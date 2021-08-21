@@ -1,11 +1,12 @@
 import { Button, StyleSheet, Text, TextInput, View } from 'react-native';
 
-import IconLoading from './src/components/loading';
+import { Provider as PaperProvider } from 'react-native-paper'
 import React from 'react';
 import { StatusBar } from 'expo-status-bar';
 
 export default function App() {
   return (
+    <PaperProvider>
     <View style={styles.container}>
       <Text>Green Mode</Text>
       <StatusBar style="auto" /> 
@@ -16,6 +17,7 @@ export default function App() {
         <Button title="Ir al shop"/>
       </View>
     </View>
+    </PaperProvider>
   );
 }
 
