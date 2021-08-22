@@ -1,7 +1,6 @@
 import AwesomeIcon from 'react-native-vector-icons/FontAwesome';
 import {NavigationContainer} from '@react-navigation/native';
 import React from 'react';
-import { SafeAreaInsetsContext } from 'react-native-safe-area-context';
 import { StyleSheet } from 'react-native';
 import cart from '../screens/cart';
 import {createMaterialBottomTabNavigator} from '@react-navigation/material-bottom-tabs';
