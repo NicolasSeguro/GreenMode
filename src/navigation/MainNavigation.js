@@ -2,11 +2,11 @@ import AwesomeIcon from 'react-native-vector-icons/FontAwesome';
 import {NavigationContainer} from '@react-navigation/native';
 import React from 'react';
 import { StyleSheet } from 'react-native';
-import cart from '../screens/cart';
+import cart from '../screens/Cart';
 import {createMaterialBottomTabNavigator} from '@react-navigation/material-bottom-tabs';
-import home from '../screens/home';
-import search from '../screens/search';
-import user from '../screens/user';
+import home from '../screens/Home';
+import search from '../screens/Search';
+import user from '../screens/User';
 
 const Tab = createMaterialBottomTabNavigator();
 
@@ -22,19 +22,19 @@ export default function mainNavigation() {
                 })}
             >
                 <Tab.Screen
-                    name=""
+                    name="home"
                     component={home}
                 />
                 <Tab.Screen
-                    name=""
+                    name="search"
                     component={search}
                 />
                 <Tab.Screen
-                    name=""
+                    name="cart"
                     component={cart}
                 />
                 <Tab.Screen
-                    name=""
+                    name="user"
                     component={user}
                 />
             </Tab.Navigator>
