@@ -8,7 +8,9 @@ import mainNavigation from './src/navigation/mainNavigation';
 export default function App() {
   return (
     <PaperProvider>
-    <mainNavigation></mainNavigation>
+      <View>
+        
+      </View>
     </PaperProvider>
   );
 }

@@ -1,6 +1,7 @@
 import AwesomeIcon from 'react-native-vector-icons/FontAwesome';
 import {NavigationContainer} from '@react-navigation/native';
 import React from 'react';
+import { SafeAreaInsetsContext } from 'react-native-safe-area-context';
 import { StyleSheet } from 'react-native';
 import cart from '../screens/cart';
 import {createMaterialBottomTabNavigator} from '@react-navigation/material-bottom-tabs';
@@ -15,6 +16,11 @@ export default function mainNavigation() {
         <NavigationContainer>
             <Tab.Navigator 
                 barStyle={style.navigation}
+                screenOptions={({route}) => ({
+                    tabBarIcon: (routeStatus) => {
+                        return setIcon(route, routeStatus);
+                    }
+                })}
             >
                 <Tab.Screen
                     name=""
@@ -37,8 +43,35 @@ export default function mainNavigation() {
     )
 }
 
+function setIcon(route, routeStatus) {
+    let iconName = '';
+
+    switch (route.name) {
+        case 'home':
+            iconName = 'home'
+        break;
+        case 'search':
+            iconName = 'search'
+            break;
+        case 'cart':
+            iconName = 'cart'
+            break;
+        case 'user':
+            iconName = 'user'
+            break;
+        default:
+        break;
+    }
+
+    return <AwesomeIcon name={iconName} style={style.icon} />
+}
+
 const style = StyleSheet.create({
     navigation: {
         backgroundColor: '#8FBC8E'
+    },
+    icon: {
+        fontSize: 20,
+        color: '#ffffff',
     }
-})
+});
