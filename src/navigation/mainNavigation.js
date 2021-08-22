@@ -1,5 +1,7 @@
+import AwesomeIcon from 'react-native-vector-icons/FontAwesome';
 import {NavigationContainer} from '@react-navigation/native';
 import React from 'react';
+import { StyleSheet } from 'react-native';
 import cart from '../screens/cart';
 import {createMaterialBottomTabNavigator} from '@react-navigation/material-bottom-tabs';
 import home from '../screens/home';
@@ -11,7 +13,9 @@ const Tab = createMaterialBottomTabNavigator();
 export default function mainNavigation() {
     return (
         <NavigationContainer>
-            <Tab.Navigator>
+            <Tab.Navigator 
+                barStyle={style.navigation}
+            >
                 <Tab.Screen
                     name=""
                     component={home}
@@ -32,3 +36,9 @@ export default function mainNavigation() {
         </NavigationContainer>
     )
 }
+
+const style = StyleSheet.create({
+    navigation: {
+        backgroundColor: '#8FBC8E'
+    }
+})
