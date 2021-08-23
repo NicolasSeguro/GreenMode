@@ -2,10 +2,10 @@ import AwesomeIcon from 'react-native-vector-icons/FontAwesome';
 import {NavigationContainer} from '@react-navigation/native';
 import React from 'react';
 import { StyleSheet } from 'react-native';
-import cart from '../screens/Cart';
 import {createMaterialBottomTabNavigator} from '@react-navigation/material-bottom-tabs';
 import home from '../screens/Home';
 import search from '../screens/Search';
+import shoppingcart from '../screens/Cart';
 import user from '../screens/User';
 
 const Tab = createMaterialBottomTabNavigator();
@@ -22,19 +22,19 @@ export default function mainNavigation() {
                 })}
             >
                 <Tab.Screen
-                    name="home"
+                    name="Home"
                     component={home}
                 />
                 <Tab.Screen
-                    name="search"
+                    name="Buscar"
                     component={search}
                 />
                 <Tab.Screen
-                    name="cart"
-                    component={cart}
+                    name="Carrito"
+                    component={shoppingcart}
                 />
                 <Tab.Screen
-                    name="user"
+                    name="Perfil"
                     component={user}
                 />
             </Tab.Navigator>
@@ -46,16 +46,16 @@ function setIcon(route, routeStatus) {
     let iconName = '';
 
     switch (route.name) {
-        case 'home':
+        case 'Home':
             iconName = 'home'
         break;
-        case 'search':
+        case 'Buscar':
             iconName = 'search'
             break;
-        case 'cart':
-            iconName = 'cart'
+        case 'Carrito':
+            iconName = 'shopping-cart'
             break;
-        case 'user':
+        case 'Perfil':
             iconName = 'user'
             break;
         default:
