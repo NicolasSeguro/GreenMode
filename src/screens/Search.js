@@ -1,11 +1,11 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { ScrollView, StyleSheet, Text, View } from 'react-native'
 
 import React from 'react'
 
 export default function search() {
     return (
         <View style={style.container}>
-            <Text> Search</Text>
+            <Text> Buscar</Text>
         </View>
     )
 }

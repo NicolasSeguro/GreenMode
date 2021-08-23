@@ -1,16 +1,16 @@
-import Auth from '../screens/Auth'
 import React from 'react'
 import { createStackNavigator } from '@react-navigation/stack'
+import home from '../screens/Product/Home'
 
 const Stack = createStackNavigator();
 
-export default function PerfilStack() {
+export default function ProductStack() {
     return (
         <Stack.Navigator>
             <Stack.Screen 
-                name='Auth'
-                component={Auth}
-                options={{ title: 'Cuenta', headerShown: false}}
+                name="home"
+                component={home}
+                options={{headerShown: false}}
             />
         </Stack.Navigator>
     )

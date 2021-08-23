@@ -1,9 +1,9 @@
 import AwesomeIcon from 'react-native-vector-icons/FontAwesome';
 import {NavigationContainer} from '@react-navigation/native';
+import ProductStack from './ProductStack';
 import React from 'react';
 import { StyleSheet } from 'react-native';
 import {createMaterialBottomTabNavigator} from '@react-navigation/material-bottom-tabs';
-import home from '../screens/Home';
 import search from '../screens/Search';
 import shoppingcart from '../screens/Cart';
 import user from '../screens/User';
@@ -23,7 +23,7 @@ export default function mainNavigation() {
             >
                 <Tab.Screen
                     name="Home"
-                    component={home}
+                    component={ProductStack}
                 />
                 <Tab.Screen
                     name="Buscar"
