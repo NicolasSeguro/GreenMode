@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Text, View } from 'react-native'
+import { StyleSheet, Text, View } from 'react-native'
 
 import { getLastProductsApi } from '../../api/product'
 
@@ -16,7 +16,13 @@ export default function NewProducts() {
 
     return (
         <View>
-            <Text>Hola</Text>
+            <Text style={style.text}>Hola</Text>
         </View>
     )
 }
+
+const style = StyleSheet.create ({
+    text: {
+        fontFamily: 'NunitoBold'
+    }
+})

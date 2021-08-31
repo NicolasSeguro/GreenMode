@@ -5,7 +5,7 @@ import React from 'react'
 export default function search() {
     return (
         <View style={style.container}>
-            <Text> Buscar</Text>
+            <Text style={style.text}> Buscar</Text>
         </View>
     )
 }
@@ -15,5 +15,8 @@ const style = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center'
+    },
+    text: {
+        fontFamily: 'NunitoBold'
     }
 })

@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react'
-import { Text, View } from 'react-native'
+import { StyleSheet, Text, View } from 'react-native'
 
 import { getBannerApi } from '../../api/home-banner';
 
@@ -15,7 +15,13 @@ export default function Banners() {
     
     return (
         <View>
-            <Text>Banner</Text>
+            <Text style={style.text}>Banner</Text>
         </View>
     )
 }
+
+const style = StyleSheet.create ({
+    text: {
+        fontFamily: 'NunitoBold'
+    }
+})
