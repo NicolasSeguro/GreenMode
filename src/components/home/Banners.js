@@ -15,7 +15,7 @@ export default function Banners() {
     
     return (
         <View>
-            <Text style={style.text}>Banner</Text>
+            <Text style={style.text}></Text>
         </View>
     )
 }

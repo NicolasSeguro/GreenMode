@@ -1,5 +1,6 @@
 import AwesomeIcon from 'react-native-vector-icons/FontAwesome';
 import {NavigationContainer} from '@react-navigation/native';
+import PerfilStack from './PerfilStack';
 import ProductStack from './ProductStack';
 import React from 'react';
 import { StyleSheet } from 'react-native';
@@ -35,7 +36,7 @@ export default function mainNavigation() {
                 />
                 <Tab.Screen
                     name="Perfil"
-                    component={user}
+                    component={PerfilStack}
                 />
             </Tab.Navigator>
         </NavigationContainer>

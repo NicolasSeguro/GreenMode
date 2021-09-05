@@ -10,7 +10,7 @@ export default function PerfilStack() {
             <Stack.Screen 
                 name='Auth'
                 component={Auth}
-                options={{ title: 'Cuenta', headerShown: false}}
+                options={{ title: 'MI CUENTA'}}
             />
         </Stack.Navigator>
     )

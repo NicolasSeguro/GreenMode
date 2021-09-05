@@ -10,7 +10,7 @@ export default function ProductStack() {
             <Stack.Screen 
                 name="home"
                 component={home}
-                options={{headerShown: false}}
+                options={{title: 'HOME'}}
             />
         </Stack.Navigator>
     )

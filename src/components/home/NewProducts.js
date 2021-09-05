@@ -16,7 +16,7 @@ export default function NewProducts() {
 
     return (
         <View>
-            <Text style={style.text}>Hola</Text>
+            <Text style={style.text}></Text>
         </View>
     )
 }

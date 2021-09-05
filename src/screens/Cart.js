@@ -5,7 +5,7 @@ import React from 'react'
 export default function cart() {
     return (
         <View style={style.container}>
-            <Text style={style.text}> Cart</Text>
+            <Text style={style.text}></Text>
         </View>
     )
 }
