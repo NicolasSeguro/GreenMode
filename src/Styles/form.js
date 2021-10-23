@@ -3,6 +3,9 @@ import { color } from "react-native-reanimated";
 import colors from "./colors";
 
 const FormStyles = StyleSheet.create({
+    view: {
+        marginHorizontal: 20,
+    },
     input: {
         marginBottom: 20,
     },

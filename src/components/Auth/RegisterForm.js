@@ -6,7 +6,7 @@ import React from 'react'
 
 export default function RegisterForm() {
     return (
-        <View>
+        <View style={[FormStyles.view]}>
             <Text style={[FormStyles.boxModel, FormStyles.btnText]}>
                 REGISTRATE
             </Text>
