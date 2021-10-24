@@ -1,1 +1,1 @@
-export { default } from '../../screens/SearchBar';
+export { default } from '../../screens/Search';

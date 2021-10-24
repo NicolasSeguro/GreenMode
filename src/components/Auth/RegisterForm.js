@@ -39,6 +39,9 @@ export default function RegisterForm(props) {
             <Text>
                 Crea una cuenta en GreenMode y obtén las siguientes ventajas:
             </Text>
+            <Text style={[FormStyles.listRegister]}>- Pago rapido</Text>
+            <Text style={[FormStyles.listRegister]}>- Cambios y devoluciones sin estrés</Text>
+            <Text style={[FormStyles.listRegister]}>- Ofertas y descuentos exclusivos</Text>
             <TextInput 
             label="Email"
             style={[FormStyles.input]}
@@ -63,7 +66,7 @@ export default function RegisterForm(props) {
             error={formik.errors.repeatPassword}
             />       
             <Button 
-            style={[FormStyles.btnRegister]} 
+            style={[FormStyles.btnRegister, FormStyles.boxModel]} 
             mode="contained"
             onPress={formik.handleSubmit}
             loading={loading}
@@ -73,6 +76,9 @@ export default function RegisterForm(props) {
             mode="text" 
             onPress={changeForm}
             >¿Ya tenés cuenta?  Inicia sesión aquí</Button>
+            <Text 
+            style={[FormStyles.termConditions]}  
+            >Términos y condiciones  / Política de privacidad</Text>
         </View>
     )
 }

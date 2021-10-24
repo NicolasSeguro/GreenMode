@@ -1,8 +1,10 @@
 import * as Font from 'expo-font'
 
 import { Button, StyleSheet, Text, TextInput, View } from 'react-native';
+import { useEffect, useMemo, useState } from 'react';
 
 import AppLoading from 'expo-app-loading';
+import AuthContext from './src/context/AuthContext';
 import MainNavigation from './src/navigation/MainNavigation';
 import { Provider as PaperProvider } from 'react-native-paper'
 // import { Provider } from 'react-redux';
@@ -17,18 +19,33 @@ export default function App() {
     NunitoBold: require('./assets/fonts/Nunito-Bold.ttf'),
   });
 
-  if (!loaded) return <AppLoading />
+  // const [auth, setAuth] = useState(undefined);
+
+  // useEffect(() => {
+  //   setAuth(null);
+  // },[]);
+  
+  // const authData = useMemo(
+  //   () => ({
+  //     auth: undefined,
+  //     login: () => null,
+  //     logout: () => null,
+
+  //   }),
+  //   [auth]
+  // );
+
+  // if(auth === undefined) return null;
+
 
   return (
+    // <AuthContext.Provider value={authData}>
     <PaperProvider>
-      <MainNavigation></MainNavigation>
+      <MainNavigation/>
     </PaperProvider>
+    // </AuthContext.Provider>
     // <Provider store={store}>
       
     // </Provider>
   );
 }
-
-const styles = StyleSheet.create({
-
-});

@@ -22,13 +22,20 @@ const FormStyles = StyleSheet.create({
         color: '#000',
     }, 
     boxModel: {
-        marginTop: 10,
+        marginVertical: 10,
         
     },
     btnRegister: {
         backgroundColor: '#DD9058',
         borderRadius: 30,
         color: '#fff',
+    },
+    listRegister: {
+        marginVertical: 2,
+    }, 
+    termConditions: {
+        color: '#a7a8ac',
+        textAlign: "center"
     }
 
 })
