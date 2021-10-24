@@ -8,13 +8,10 @@ import Search from '../Search'
 
 export default function home() {
     return (
-        <>
-        <Search />
         <ScrollView>
             <Banners></Banners>
            <NewProducts />
         </ScrollView>
-        </>
     )
 }
 

@@ -8,6 +8,6 @@ export async function getLastProductsApi(limit = 10) {
         const result = await response.json();
         return result;
     } catch (error) {
-        
+        return null
     }
 }

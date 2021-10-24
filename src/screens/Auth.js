@@ -3,8 +3,6 @@ import React, { useState } from 'react'
 
 import LoginForm from '../components/Auth/LoginForm'
 import RegisterForm from '../components/Auth/RegisterForm'
-import SearchBar from '../components/Search/SearchBar'
-import { Searchbar } from 'react-native-paper'
 
 export default function auth() {
     const [showLogin, setShowLogin] = useState(false);
