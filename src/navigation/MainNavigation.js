@@ -7,7 +7,6 @@ import { StyleSheet } from 'react-native';
 import {createMaterialBottomTabNavigator} from '@react-navigation/material-bottom-tabs';
 import search from '../screens/Search';
 import shoppingcart from '../screens/Cart';
-import user from '../screens/User';
 
 const Tab = createMaterialBottomTabNavigator();
 
@@ -23,7 +22,7 @@ export default function mainNavigation() {
                 })}
             >
                 <Tab.Screen
-                    name="Home"
+                    name='Home'
                     component={ProductStack}
                 />
                 <Tab.Screen

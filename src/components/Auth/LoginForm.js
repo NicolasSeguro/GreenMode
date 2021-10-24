@@ -34,7 +34,7 @@ export default function LoginForm(props) {
     return (
         <View style={[FormStyles.view]}>
             <Text style={[FormStyles.boxModel, FormStyles.btnText]}>
-                INICIAR SESIÓN
+                INICIA SESIÓN
             </Text>
             <Text style={[FormStyles.boxModel, FormStyles.btnText]}>
                 Inicia sesión en tu cuenta de GreenMode para realizar un pago rápido.            
