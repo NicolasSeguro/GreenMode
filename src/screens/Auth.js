@@ -7,11 +7,13 @@ import { Searchbar } from 'react-native-paper'
 
 export default function auth() {
     const [showLogin, setShowLogin] = useState(false);
+
+    const changeForm = () => setShowLogin(!showLogin);
     return (
         <>
         <ScrollView>
             <KeyboardAvoidingView>
-                {showLogin ? <Text>Inicia sesion </Text> : <RegisterForm />}
+                {showLogin ? <Text>Inicia sesion </Text> : <RegisterForm changeForm={changeForm}/>}
             </KeyboardAvoidingView>
         </ScrollView>
         </>
