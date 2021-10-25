@@ -1,12 +1,34 @@
-import { StyleSheet, View } from 'react-native'
+import { Animated, Keyboard, StyleSheet, View } from 'react-native'
+import { AnimatedIcon, animatedTransition, animatedTransitionReset, inputAnimation, inputAnimationWidth } from './SearchAnimation'
+import React, { useEffect, useState } from 'react'
 
-import React from 'react'
 import { Searchbar } from 'react-native-paper'
 
-export default function SearchBar() {
+export default function SearchBarArrow() {
+
+    const openSearch = () => {
+        animatedTransition.start();
+    }
+
+    const closeSearch = () => {
+        animatedTransitionReset.start();
+        Keyboard.dismiss();
+    }
+
     return (
         <View style={styles.container}>
-            <SearchBar placeholder="Buscar"></SearchBar>
+            
+            <View style={styles.containerInput}>
+                <AnimatedIcon
+                    name='arrow-left'
+                    size={20}
+                    style={styles.backArrow}
+                    onPress={closeSearch}
+                />
+            </View>
+            <Animated.View style={[inputAnimation, {width: inputAnimationWidth}]}>
+                <Searchbar placeholder='Buscar' onFocus={openSearch}></Searchbar>
+            </Animated.View>
         </View>
     )
 }
@@ -17,5 +39,15 @@ const styles = StyleSheet.create ({
         paddingVertical: 40,
         paddingHorizontal:20,
         zIndex: 1
-    }
+    },
+    containerInput: {
+        position: 'relative',
+        alignItems: 'flex-end'
+    },
+    backArrow: {
+        position: 'absolute',
+        top: 10,
+        right: 0,
+        color: '#fff'
+    },
 })
