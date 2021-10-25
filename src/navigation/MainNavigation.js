@@ -5,7 +5,7 @@ import ProductStack from './ProductStack';
 import React from 'react';
 import { StyleSheet } from 'react-native';
 import {createMaterialBottomTabNavigator} from '@react-navigation/material-bottom-tabs';
-import search from '../screens/Search';
+import search from '../screens/Product/Search';
 import shoppingcart from '../screens/Cart';
 
 const Tab = createMaterialBottomTabNavigator();

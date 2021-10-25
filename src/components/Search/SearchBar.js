@@ -2,10 +2,15 @@ import { Animated, Keyboard, StyleSheet, View } from 'react-native'
 import { AnimatedIcon, animatedTransition, animatedTransitionReset, inputAnimation, inputAnimationWidth } from './SearchAnimation'
 import React, { useEffect, useState } from 'react'
 
+import SearchStyle from '../../Styles/search'
 import { Searchbar } from 'react-native-paper'
+import { useNavigation } from '@react-navigation/native'
 
 export default function SearchBarArrow() {
 
+    const [searchQuery, setSearchQuery] = useState('');
+    const onChangeSearch = (query) => setSearchQuery(query) 
+    
     const openSearch = () => {
         animatedTransition.start();
     }
@@ -15,39 +20,35 @@ export default function SearchBarArrow() {
         Keyboard.dismiss();
     }
 
+    const onSearch = () => {
+        console.log('Buscando...' + searchQuery);
+        closeSearch();
+    };
+
     return (
-        <View style={styles.container}>
+        <View style={[SearchStyle.container]}>
             
-            <View style={styles.containerInput}>
+            <View style={[SearchStyle.containerInput]}>
                 <AnimatedIcon
                     name='arrow-left'
                     size={20}
-                    style={styles.backArrow}
+                    style={[SearchStyle.backArrow]}
                     onPress={closeSearch}
                 />
             </View>
             <Animated.View style={[inputAnimation, {width: inputAnimationWidth}]}>
-                <Searchbar placeholder='Buscar' onFocus={openSearch}></Searchbar>
+                <Searchbar placeholder='Buscar'
+                    value={searchQuery} 
+                    onFocus={openSearch} 
+                    style={[SearchStyle.searchStyle]}
+                    onChangeText={onChangeSearch}
+                    onSubmitEditing={onSearch}>
+                </Searchbar>
             </Animated.View>
         </View>
     )
 }
 
 const styles = StyleSheet.create ({
-    container: {
-        backgroundColor: '#000',
-        paddingVertical: 40,
-        paddingHorizontal:20,
-        zIndex: 1
-    },
-    containerInput: {
-        position: 'relative',
-        alignItems: 'flex-end'
-    },
-    backArrow: {
-        position: 'absolute',
-        top: 10,
-        right: 0,
-        color: '#fff'
-    },
+   
 })

@@ -1,6 +1,7 @@
 import React from 'react'
 import { createStackNavigator } from '@react-navigation/stack'
 import home from '../screens/Product/Home'
+import search from '../screens/Product/Search';
 
 const Stack = createStackNavigator();
 
@@ -11,6 +12,11 @@ export default function ProductStack() {
                 name="home"
                 component={home}
                 options={{title: 'HOME'}}
+            /> 
+            <Stack.Screen 
+                name="search"
+                component={search}
+                options={{title: 'Search', headerShown: false}}
             /> 
                        
         </Stack.Navigator>
