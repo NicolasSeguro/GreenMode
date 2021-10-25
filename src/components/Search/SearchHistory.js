@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { Dimensions, StyleSheet, Text, TouchableWithoutFeedback, View } from 'react-native'
 
 import React from 'react'
 
@@ -6,7 +6,7 @@ export default function SearchHistory(props) {
     const  { showHistory } = props;
     return (
         <View style={[
-            showHistory ? styles.history : styles.hidden
+            showHistory ? styles.history : styles.hidden, {top: 90, left: 30}
         ]}>
             <Text>Historial</Text>
         </View>
@@ -19,7 +19,7 @@ const styles = StyleSheet.create({
     },
     history: {
         position: 'absolute',
-        width: 300,
-        height: 500,
+        width: Dimensions.get('window').width,
+        height: Dimensions.get('window').height,
     }
 })

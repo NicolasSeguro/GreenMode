@@ -10,6 +10,7 @@ export default function SearchBarArrow() {
 
     const [searchQuery, setSearchQuery] = useState('');
     const [showHistory, setShowHistory] = useState(false);
+
     const onChangeSearch = (query) => setSearchQuery(query) 
     
     const openSearch = () => {
@@ -48,11 +49,9 @@ export default function SearchBarArrow() {
                     onSubmitEditing={onSearch}>
                 </Searchbar>
             </Animated.View>
-            <SearchHistory showHistory={showHistory} />
+            <SearchHistory 
+                showHistory={showHistory} 
+            />
         </View>
     )
 }
-
-const styles = StyleSheet.create ({
-   
-})
