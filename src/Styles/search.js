@@ -22,7 +22,7 @@ const SearchStyle = StyleSheet.create({
         borderColor: '#66A366',
         borderWidth: 1,
         borderRadius: 26,
-    }
+    },
 })
 
 export default SearchStyle;
