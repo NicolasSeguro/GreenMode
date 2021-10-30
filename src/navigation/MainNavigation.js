@@ -1,4 +1,5 @@
 import AwesomeIcon from 'react-native-vector-icons/FontAwesome';
+import Location from '../screens/Location';
 import {NavigationContainer} from '@react-navigation/native';
 import PerfilStack from './PerfilStack';
 import ProductStack from './ProductStack';
@@ -30,6 +31,10 @@ export default function mainNavigation() {
                     component={search}
                 />
                 <Tab.Screen
+                    name="Cerca de mi"
+                    component={Location}
+                />
+                <Tab.Screen
                     name="Carrito"
                     component={shoppingcart}
                 />
@@ -51,6 +56,9 @@ function setIcon(route, routeStatus) {
         break;
         case 'Buscar':
             iconName = 'search'
+            break;
+        case 'Cerca de mi':
+            iconName = 'map-marker'
             break;
         case 'Carrito':
             iconName = 'shopping-cart'
