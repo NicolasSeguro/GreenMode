@@ -17,6 +17,6 @@ const style = StyleSheet.create({
         alignItems: 'center'
     },
     text: {
-        fontFamily: 'NunitoBold'
+        fontFamily: 'Nunito'
     }
 })

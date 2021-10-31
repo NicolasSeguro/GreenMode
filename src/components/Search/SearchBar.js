@@ -2,9 +2,11 @@ import { Animated, Keyboard, StyleSheet, View } from 'react-native'
 import { AnimatedIcon, animatedTransition, animatedTransitionReset, inputAnimation, inputAnimationWidth } from './SearchAnimation'
 import React, { useEffect, useState } from 'react'
 
+import { NavigationContainer } from '@react-navigation/native'
 import SearchHistory from './SearchHistory'
 import SearchStyle from '../../Styles/search'
 import { Searchbar } from 'react-native-paper'
+import { updateSearchHistoryApi } from '../../api/search'
 
 export default function SearchBarArrow() {
 
@@ -24,9 +26,14 @@ export default function SearchBarArrow() {
         setShowHistory(!showHistory)
     }
 
-    const onSearch = () => {
-        console.log('Buscando...' + searchQuery);
+    const onSearch = async () => {
         closeSearch();
+
+        await updateSearchHistoryApi(searchQuery);
+
+        navigation.push('search', {
+            search: searchQuery,
+        });
     };
 
     return (

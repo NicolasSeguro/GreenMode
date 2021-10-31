@@ -6,7 +6,7 @@ const bannersHome = StyleSheet.create ( {
         resizeMode: 'contain',
     },
     text: {
-        fontFamily: 'NunitoBold',
+        fontFamily: 'Nunito',
         fontSize: 22,
         textAlign: 'center',
         color: '#DD9058',

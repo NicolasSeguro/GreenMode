@@ -27,6 +27,6 @@ export default function Banners() {
 
 const style = StyleSheet.create ({
     text: {
-        fontFamily: 'NunitoBold'
+        fontFamily: 'Nunito'
     }
 })
