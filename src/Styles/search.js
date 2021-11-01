@@ -89,10 +89,6 @@ const SearchStyle = StyleSheet.create({
     imageColumn: {
         flexDirection: 'row'
     },
-    borderHistory: {
-        borderWidth: 1,
-        borderColor: '#66A366',
-    },
 })
 
 export default SearchStyle;
