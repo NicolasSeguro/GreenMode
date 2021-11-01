@@ -4,7 +4,8 @@ import {NavigationContainer} from '@react-navigation/native';
 import PerfilStack from './PerfilStack';
 import ProductStack from './ProductStack';
 import React from 'react';
-import SearchBarArrow from '../components/Search/SearchBar';
+// import SearchBarArrow from '../components/Search/SearchBar';
+import SearchStack from './SearchStack';
 import { StyleSheet } from 'react-native';
 import {createMaterialBottomTabNavigator} from '@react-navigation/material-bottom-tabs';
 import search from '../screens/Product/Search';
@@ -29,7 +30,7 @@ export default function mainNavigation() {
                 />
                 <Tab.Screen
                     name="Buscar"
-                    component={SearchBarArrow}
+                    component={SearchStack}
                 />
                 <Tab.Screen
                     name="Cerca de mi"

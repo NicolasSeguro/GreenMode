@@ -1,5 +1,3 @@
-import * as Font from 'expo-font'
-
 import { Button, StyleSheet, Text, TextInput, View } from 'react-native';
 import { useEffect, useMemo, useState } from 'react';
 
@@ -15,8 +13,13 @@ import { useFonts } from 'expo-font';
 
 export default function App() {
   const [loaded] = useFonts({
-    Nunito: require('./assets/fonts/Nunito-Regular.ttf'),
+    'Nunito': require('./assets/fonts/Nunito-Regular.ttf'),
+    'Nunito-bold': require('./assets/fonts/Nunito-Bold.ttf'),
   });
+
+  if(!loaded){
+    return null;
+  }
 
   // const [auth, setAuth] = useState(undefined);
 

@@ -7,13 +7,11 @@ import SearchHistory from './SearchHistory'
 import SearchStyle from '../../Styles/search'
 import { Searchbar } from 'react-native-paper'
 import { updateSearchHistoryApi } from '../../api/search'
-import { useNavigation } from '@react-navigation/native'
 
-export default function SearchBarArrow() {
+export default function SearchBarArrow({navigation}) {
 
     const [searchQuery, setSearchQuery] = useState('');
     const [showHistory, setShowHistory] = useState(false);
-    const navigation = useNavigation();
 
     const onChangeSearch = (query) => setSearchQuery(query);
     
@@ -37,7 +35,7 @@ export default function SearchBarArrow() {
         // Si es una nueva busqueda, actualiza el historial, sino no lo actualiza.
         !isReuse && (await updateSearchHistoryApi(searchQuery));
 
-        navigation.push('search', {
+        navigation.navigate('searchResults', {
             search: isReuse ? reuseSearch : searchQuery,
         });
     };
