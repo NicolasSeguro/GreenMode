@@ -25,7 +25,7 @@ export default function NewProducts() {
                 />
                 <View style={[bannersHome.relativeText]}>
                 <Text style={[bannersHome.internalText]}>
-                        FERIA
+                        FERIAS
                     </Text>
                 </View>
                 <Image source={require('./images/tienda.png')}
@@ -33,7 +33,7 @@ export default function NewProducts() {
                 />
                 <View style={[bannersHome.relativeTienda]}>
                 <Text style={[bannersHome.internalText]}>
-                        TIENDA
+                        TIENDAS
                     </Text>
                 </View>
             </View>

@@ -2,37 +2,42 @@ import { Animated, Keyboard, StyleSheet, View } from 'react-native'
 import { AnimatedIcon, animatedTransition, animatedTransitionReset, inputAnimation, inputAnimationWidth } from './SearchAnimation'
 import React, { useEffect, useState } from 'react'
 
-import { NavigationContainer } from '@react-navigation/native'
 import SearchHistory from './SearchHistory'
 import SearchStyle from '../../Styles/search'
 import { Searchbar } from 'react-native-paper'
 import { updateSearchHistoryApi } from '../../api/search'
+import { useNavigation } from '@react-navigation/native'
 
 export default function SearchBarArrow() {
 
     const [searchQuery, setSearchQuery] = useState('');
     const [showHistory, setShowHistory] = useState(false);
+    const navigation = useNavigation();
 
-    const onChangeSearch = (query) => setSearchQuery(query) 
+    const onChangeSearch = (query) => setSearchQuery(query);
     
     const openSearch = () => {
         animatedTransition.start();
         setShowHistory(!showHistory)
-    }
+    };
 
     const closeSearch = () => {
         animatedTransitionReset.start();
         Keyboard.dismiss();
         setShowHistory(!showHistory)
-    }
+    };
 
-    const onSearch = async () => {
+    const onSearch = async (reuseSearch) => {
+
+        const isReuse = typeof reuseSearch === 'string';
+
         closeSearch();
-
-        await updateSearchHistoryApi(searchQuery);
+        
+        // Si es una nueva busqueda, actualiza el historial, sino no lo actualiza.
+        !isReuse && (await updateSearchHistoryApi(searchQuery));
 
         navigation.push('search', {
-            search: searchQuery,
+            search: isReuse ? reuseSearch : searchQuery,
         });
     };
 
@@ -58,6 +63,7 @@ export default function SearchBarArrow() {
             </Animated.View>
             <SearchHistory 
                 showHistory={showHistory} 
+                onSearch={onSearch}
             />
         </View>
     )
