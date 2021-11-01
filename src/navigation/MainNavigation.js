@@ -1,5 +1,6 @@
 import AwesomeIcon from 'react-native-vector-icons/FontAwesome';
 import Location from '../screens/Location';
+import LocationStack from './LocationStack';
 import {NavigationContainer} from '@react-navigation/native';
 import PerfilStack from './PerfilStack';
 import ProductStack from './ProductStack';
@@ -8,7 +9,6 @@ import React from 'react';
 import SearchStack from './SearchStack';
 import { StyleSheet } from 'react-native';
 import {createMaterialBottomTabNavigator} from '@react-navigation/material-bottom-tabs';
-import search from '../screens/Product/Search';
 import shoppingcart from '../screens/Cart';
 
 const Tab = createMaterialBottomTabNavigator();
@@ -34,7 +34,7 @@ export default function mainNavigation() {
                 />
                 <Tab.Screen
                     name="Cerca de mi"
-                    component={Location}
+                    component={LocationStack}
                 />
                 <Tab.Screen
                     name="Carrito"

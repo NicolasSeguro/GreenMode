@@ -1,5 +1,3 @@
-import { Text, View } from 'react-native'
-
 import React from 'react'
 import Search from '../screens/Product/Search'
 import SearchBarArrow from '../components/Search/SearchBar'
