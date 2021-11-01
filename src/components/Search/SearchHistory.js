@@ -23,6 +23,7 @@ export default function SearchHistory(props) {
         <View style={[
             showHistory ? styles.history : styles.hidden, {top: 90, left: 30}
         ]}>
+            <Text style={styles.principalText}>Búsquedas principales sugeridas</Text>
             {history && (
                 map(history, (item, index) => (
                   <TouchableWithoutFeedback key={index} 
@@ -64,5 +65,10 @@ const styles = StyleSheet.create({
     text: {
         fontSize: 18,
         color: '#37422E'
+    },
+    principalText: {
+        fontSize: 18,
+        color: '#000',
+        fontWeight: 'bold',
     }
 })

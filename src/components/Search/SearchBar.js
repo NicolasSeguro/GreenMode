@@ -1,5 +1,6 @@
 import { Animated, Keyboard, StyleSheet, View } from 'react-native'
 import { AnimatedIcon, animatedTransition, animatedTransitionReset, inputAnimation, inputAnimationWidth } from './SearchAnimation'
+import { Button, TextInput } from 'react-native-paper';
 import React, { useEffect, useState } from 'react'
 
 import SearchHistory from './SearchHistory'
@@ -65,6 +66,44 @@ export default function SearchBarArrow() {
                 showHistory={showHistory} 
                 onSearch={onSearch}
             />
+            <View style={[SearchStyle.imageColumn]}>
+            <Button 
+            mode='contained'
+            style={[SearchStyle.btnCategories]}
+            >
+                NEW IN
+            </Button>
+            <Button 
+            mode='contained'
+            style={[SearchStyle.btnCategoriesSale]}
+            >
+                SALE
+            </Button>
+            <Button 
+            mode='contained'
+            style={[SearchStyle.btnCategoriesTienda]}
+            >
+                TIENDAS
+            </Button>
+            <Button 
+            mode='contained'
+            style={[SearchStyle.btnCategoriesFeria]}
+            >
+                FERIAS
+            </Button>
+            <Button 
+            mode='contained'
+            style={[SearchStyle.btnCategoriesPantalones]}
+            >
+                PANTALONES
+            </Button>
+            <Button 
+            mode='contained'
+            style={[SearchStyle.btnCategoriesAbrigos]}
+            >
+                ABRIGOS
+            </Button>
+            </View>
         </View>
     )
 }
