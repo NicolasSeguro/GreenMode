@@ -1,19 +1,32 @@
 import { ActivityIndicator, Alert, Button, Text, View } from 'react-native'
 
 import React from 'react'
-import locationStyle from '../../Styles/location'
+import { StyleSheet } from 'react-native'
 
 export default function LocationPicker() {
     return (
-        <View style={[locationStyle.view]}>
-            <Text style={[locationStyle.boxModel, locationStyle.btnText]}>
+        <View>
+            <Text style={style.encabezado}>
                 AGREGAR UBICACIÓN
             </Text>
             <Button
-            style={[locationStyle.btnRegister, locationStyle.boxModel]} 
+            style={style.btnRegister}
             mode="contained"
             title='Ver cerca de mi'
             />
         </View>
     )
 }
+
+const style = StyleSheet.create ({
+    encabezado: {
+        marginTop: 10,
+        fontSize: 18,
+        color: '#37422E'
+    },
+    btnRegister: {
+        backgroundColor: '#DD9058',
+        borderRadius: 30,
+        color: '#fff',
+    },
+})
